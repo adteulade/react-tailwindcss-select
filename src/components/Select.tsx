@@ -27,7 +27,8 @@ const Select: React.FC<SelectProps> = ({
     primaryColor = DEFAULT_THEME,
     formatGroupLabel = null,
     formatOptionLabel = null,
-    classNames
+    classNames,
+    disableCloseOnClickedOutside = false
 }) => {
     const [open, setOpen] = useState<boolean>(menuIsOpen);
     const [list, setList] = useState<ListOption>(options);
@@ -79,7 +80,9 @@ const Select: React.FC<SelectProps> = ({
     }, [open]);
 
     useOnClickOutside(ref, () => {
-        closeDropDown();
+        if (!disableCloseOnClickedOutside) {
+            closeDropDown();
+        }
     });
 
     const onPressEnterOrSpace = useCallback(
