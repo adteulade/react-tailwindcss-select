@@ -28,11 +28,12 @@ const Select: React.FC<SelectProps> = ({
     formatGroupLabel = null,
     formatOptionLabel = null,
     classNames,
-    disableCloseOnClickedOutside = false
+    disableCloseOnClickedOutside = false,
+    searchInputValue
 }) => {
     const [open, setOpen] = useState<boolean>(menuIsOpen);
     const [list, setList] = useState<ListOption>(options);
-    const [inputValue, setInputValue] = useState<string>("");
+    const [inputValue, setInputValue] = useState<string>(searchInputValue || "");
     const ref = useRef<HTMLDivElement>(null);
     const searchBoxRef = useRef<HTMLInputElement>(null);
 
