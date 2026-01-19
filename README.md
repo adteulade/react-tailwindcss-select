@@ -65,7 +65,7 @@ npm install react-tailwindcss-select
 make sure you have installed the peer dependencies as well with the below versions.
 
 ```
-"react": "^18.2.0"
+"react": "^19.2.3"
 ```
 
 ## Usage
@@ -88,7 +88,7 @@ module.exports = {
     // ...
     content: [
         "./src/**/*.{js,jsx,ts,tsx}",
-        "./node_modules/react-tailwindcss-select/dist/index.esm.js"
+        "./node_modules/react-tailwindcss-select-adteulade-2/dist/index.esm.js"
     ]
     // ...
 };
